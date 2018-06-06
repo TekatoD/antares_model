@@ -8,10 +8,17 @@
    <link name="base_link">
      <visual>
        <geometry>
-         <mesh filename="package://antares_model/meshes/body_visual.stl"/>
+           <mesh filename="package://antares_model/meshes/body_visual_simple.stl"/>
+           <box size="0,23 0,115 0,235"/>
        </geometry>
        <material name="white"/>
      </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0,17773 -0,079752 0,56967"/>
+        <geometry>
+           <box size="0,23 0,115 0,235"/>
+        </geometry>
+     </collision>
    </link>
 
    <joint name="body_to_neck" type="continuous">
@@ -23,12 +30,18 @@
 
    <link name="neck">
      <visual>
-     <origin rpy="0 0 0" xyz=" -0,17762 0,08653 -0,72139"/>
+     <origin rpy="0 0 0" xyz="-0,17762 0,08653 -0,72139"/>
        <geometry>
-         <mesh filename="package://antares_model/meshes/neck_visual.stl"/>
+         <mesh filename="package://antares_model/meshes/neck_visual_simple.stl"/>
        </geometry>
        <material name="white"/>
      </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+           <box size="0,034 0,035 0,07"/>
+        </geometry>
+     </collision>
    </link>
 
 
@@ -43,10 +56,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,17762 0,08653 -0,74617"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/head_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/head_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="0 0 0" xyz="0 -0,01 0,015"/>
+        <geometry>
+           <box size="0,07 0,12 0,037"/>
+        </geometry>
+     </collision>
    </link>
 
    <joint name="body_to_pelvis_l" type="continuous">
@@ -60,10 +79,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26206 0,099753 -0,43020"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/pelvis_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/pelvis_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+           <box size="0,053 0,064 0,04"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="body_to_pelvis_r" type="continuous">
@@ -77,10 +102,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,093392 0,099753 -0,43020"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/pelvis_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/pelvis_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+           <box size="0,053 0,064 0,04"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="pelvis_l_to_pelvis_servos" type="continuous">
@@ -94,10 +125,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26206 0,099753 -0,41768"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/pelvis_servos_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/pelvis_servos_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="0 0 0" xyz="0 0,023 -0,017"/>
+        <geometry>
+           <box size="0,039 0,105 0,062"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="pelvis_r_to_pelvis_servos" type="continuous">
@@ -111,10 +148,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,093392 0,099753 -0,41768"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/pelvis_servos_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/pelvis_servos_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="0 0 0" xyz="0 0,023 -0,017"/>
+        <geometry>
+           <box size="0,039 0,105 0,062"/>
+        </geometry>
+     </collision>
    </link>
    
 <joint name="pelvis_l_servos_to_hip" type="continuous">
@@ -132,6 +175,12 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="-0,2967 0 0" xyz="0 -0,025 -0,08"/>
+        <geometry>
+           <box size="0,05 0,044 0,21"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="pelvis_r_servos_to_hip" type="continuous">
@@ -149,6 +198,12 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+       <collision>
+        <origin rpy="-0,2967 0 0" xyz="0 -0,025 -0,08"/>
+        <geometry>
+           <box size="0,05 0,044 0,21"/>
+        </geometry>
+     </collision>
    </link>
    
     <joint name="hip_l_to_calf" type="continuous">
