@@ -171,7 +171,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26206 0,099753 -0,41768"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/hip_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/hip_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -194,7 +194,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,093392 0,099753 -0,41768"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/hip_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/hip_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -217,10 +217,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26206 0,097653 -0,24748"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/calf_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/calf_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,082"/>
+        <geometry>
+           <box size="0,087 0,04 0,19"/>
+        </geometry>
+     </collision>
    </link>
    
     <joint name="hip_r_to_calf" type="continuous">
@@ -234,10 +240,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,093392 0,097653 -0,24748"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/calf_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/calf_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,082"/>
+        <geometry>
+           <box size="0,087 0,04 0,19"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="calf_l_to_ankle_servos" type="continuous">
@@ -251,10 +263,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26206 0,093989 -0,069705"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/ankle_l_servos_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/ankle_l_servos_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0,02 -0,017"/>
+        <geometry>
+           <box size="0,045 0,1 0,06"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="calf_r_to_ankle_servos" type="continuous">
@@ -268,10 +286,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,093392 0,093989 -0,069705"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/ankle_r_servos_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/ankle_r_servos_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0,02 -0,017"/>
+        <geometry>
+           <box size="0,045 0,1 0,06"/>
+        </geometry>
+     </collision>
    </link>
    
     <joint name="ankle_l_servos_to_ankle" type="continuous">
@@ -285,10 +309,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,26306 0,093987 -0,071705"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/ankle_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/ankle_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0,004 -0,005 -0,0572"/>
+        <geometry>
+           <box size="0,105 0,2 0,01"/>
+        </geometry>
+     </collision>
    </link>
    
     <joint name="ankle_r_servos_to_ankle" type="continuous">
@@ -302,10 +332,16 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,092392 0,093987 -0,071705"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/ankle_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/ankle_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="-0,004 -0,005 -0,0572"/>
+        <geometry>
+           <box size="0,105 0,2 0,01"/>
+        </geometry>
+     </collision>
    </link>
    
    <joint name="body_to_shoulder_l" type="continuous">
