@@ -355,7 +355,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,29596 0,099723 -0,64948"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/upper_shoulder_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/upper_shoulder_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -372,7 +372,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,059497 0,099723 -0,64948"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/upper_shoulder_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/upper_shoulder_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -389,7 +389,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,32890 0,099953 -0,64945"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/lower_shoulder_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/lower_shoulder_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -406,7 +406,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,026628 0,099953 -0,64945"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/lower_shoulder_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/lower_shoulder_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -423,7 +423,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,32790 0,099760 -0,50750"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/forearm_l_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/forearm_l_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
@@ -440,7 +440,7 @@
 	   <visual>
 		<origin rpy="0 0 0" xyz="-0,025628 0,099760 -0,50750"/>
        		<geometry>
-         		<mesh filename="package://antares_model/meshes/forearm_r_visual.stl"/>
+         		<mesh filename="package://antares_model/meshes/forearm_r_visual_simple.stl"/>
        		</geometry>
        		<material name="white"/>
 	   </visual>
