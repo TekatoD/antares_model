@@ -21,7 +21,7 @@
      </collision>
    </link>
 
-   <joint name="body_to_neck" type="continuous">
+   <joint name="head_yaw" type="continuous">
      <origin rpy="0 0 0" xyz="0.17762 -0.086853 0.72319"/>
      <parent link="base_link"/>
      <child link="neck"/>
@@ -45,7 +45,7 @@
    </link>
 
 
-   <joint name="neck_to_head" type="continuous">
+   <joint name="head_pitch" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 0.022976"/>
      <parent link="neck"/>
      <child link="head"/>
@@ -68,7 +68,7 @@
      </collision>
    </link>
 
-   <joint name="body_to_pelvis_l" type="continuous">
+   <joint name="pelvis_yaw_l" type="continuous">
      <origin rpy="0 0 0" xyz="0.26206 -0.099753 0.43020"/>
      <parent link="base_link"/>
      <child link="pelvis_l"/>
@@ -91,7 +91,7 @@
      </collision>
    </link>
    
-   <joint name="body_to_pelvis_r" type="continuous">
+   <joint name="pelvis_yaw_r" type="continuous">
      <origin rpy="0 0 0" xyz="0.093392 -0.099753 0.43020"/>
      <parent link="base_link"/>
      <child link="pelvis_r"/>
@@ -114,7 +114,7 @@
      </collision>
    </link>
    
-   <joint name="pelvis_l_to_pelvis_servos" type="continuous">
+   <joint name="pelvis_roll_l" type="continuous">
      <origin rpy="0 0 0" xyz="-0.00017 0 -0.01252"/>
      <parent link="pelvis_l"/>
      <child link="pelvis_l_servos"/>
@@ -137,7 +137,7 @@
      </collision>
    </link>
    
-   <joint name="pelvis_r_to_pelvis_servos" type="continuous">
+   <joint name="pelvis_roll_r" type="continuous">
      <origin rpy="0 0 0" xyz="0.00017 0 -0.01252"/>
      <parent link="pelvis_r"/>
      <child link="pelvis_r_servos"/>
@@ -160,7 +160,7 @@
      </collision>
    </link>
    
-<joint name="pelvis_l_servos_to_hip" type="continuous">
+<joint name="pelvis_pitch_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 0"/>
      <parent link="pelvis_l_servos"/>
      <child link="hip_l"/>
@@ -183,7 +183,7 @@
      </collision>
    </link>
    
-   <joint name="pelvis_r_servos_to_hip" type="continuous">
+   <joint name="pelvis_pitch_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 0"/>
      <parent link="pelvis_r_servos"/>
      <child link="hip_r"/>
@@ -206,7 +206,7 @@
      </collision>
    </link>
    
-    <joint name="hip_l_to_calf" type="continuous">
+    <joint name="knee_pitch_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0.001 -0.1759"/>
      <parent link="hip_l"/>
      <child link="calf_l"/>
@@ -229,7 +229,7 @@
      </collision>
    </link>
    
-    <joint name="hip_r_to_calf" type="continuous">
+    <joint name="knee_pitch_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0.001 -0.1759"/>
      <parent link="hip_r"/>
      <child link="calf_r"/>
@@ -252,7 +252,7 @@
      </collision>
    </link>
    
-   <joint name="calf_l_to_ankle_servos" type="continuous">
+   <joint name="ankle_pitch_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0.003 -0.170075"/>
      <parent link="calf_l"/>
      <child link="ankle_l_servos"/>
@@ -275,7 +275,7 @@
      </collision>
    </link>
    
-   <joint name="calf_r_to_ankle_servos" type="continuous">
+   <joint name="ankle_pitch_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0.003 -0.170075"/>
      <parent link="calf_r"/>
      <child link="ankle_r_servos"/>
@@ -298,7 +298,7 @@
      </collision>
    </link>
    
-    <joint name="ankle_l_servos_to_ankle" type="continuous">
+    <joint name="ankle_roll_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 0"/>
      <parent link="ankle_l_servos"/>
      <child link="ankle_l"/>
@@ -321,7 +321,7 @@
      </collision>
    </link>
    
-    <joint name="ankle_r_servos_to_ankle" type="continuous">
+    <joint name="ankle_roll_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 0"/>
      <parent link="ankle_r_servos"/>
      <child link="ankle_r"/>
@@ -344,7 +344,7 @@
      </collision>
    </link>
    
-   <joint name="body_to_shoulder_l" type="continuous">
+   <joint name="shoulder_pitch_l" type="continuous">
      <origin rpy="0 0 0" xyz="0.29596 -0.099723 0.64948"/>
      <parent link="base_link"/>
      <child link="shoulder_l"/>
@@ -359,9 +359,15 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0,021 0 0"/>
+        <geometry>
+           <box size="0,04 0,044 0,03"/>
+        </geometry>
+     </collision>
    </link>
    
-    <joint name="body_to_shoulder_r" type="continuous">
+    <joint name="shoulder_pitch_r" type="continuous">
      <origin rpy="0 0 0" xyz="0.059497 -0.099723 0.64948"/>
      <parent link="base_link"/>
      <child link="shoulder_r"/>
@@ -376,9 +382,15 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="-0,021 0 0"/>
+        <geometry>
+           <box size="0,04 0,044 0,03"/>
+        </geometry>
+     </collision>
    </link>
    
-    <joint name="shoulder_to_lower_shoulder_l" type="continuous">
+    <joint name="shoulder_roll_l" type="continuous">
      <origin rpy="0 0 0" xyz="0.03287 -0.00003 0.00003"/>
      <parent link="shoulder_l"/>
      <child link="lower_shoulder_l"/>
@@ -393,9 +405,15 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,07"/>
+        <geometry>
+           <box size="0,036 0,036 0,17"/>
+        </geometry>
+     </collision>
    </link>
    
-   <joint name="shoulder_to_lower_shoulder_r" type="continuous">
+   <joint name="shoulder_roll_r" type="continuous">
      <origin rpy="0 0 0" xyz="-0.03287 -0.00003 0.00003"/>
      <parent link="shoulder_r"/>
      <child link="lower_shoulder_r"/>
@@ -410,9 +428,15 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,07"/>
+        <geometry>
+           <box size="0,036 0,036 0,17"/>
+        </geometry>
+     </collision>
    </link>
 
-    <joint name="lower_shoulder_l_to_forearm" type="continuous">
+    <joint name="elbow_pitch_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 -0.14048"/>
      <parent link="lower_shoulder_l"/>
      <child link="forearm_l"/>
@@ -427,9 +451,15 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,11"/>
+        <geometry>
+           <box size="0,03 0,0465 0,16"/>
+        </geometry>
+     </collision>
    </link>
    
-    <joint name="lower_shoulder_r_to_forearm" type="continuous">
+    <joint name="elbow_pitch_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 -0.14048"/>
      <parent link="lower_shoulder_r"/>
      <child link="forearm_r"/>
@@ -444,6 +474,12 @@
        		</geometry>
        		<material name="white"/>
 	   </visual>
+     <collision>
+        <origin rpy="0 0 0" xyz="0 0 -0,11"/>
+        <geometry>
+           <box size="0,03 0,0465 0,16"/>
+        </geometry>
+     </collision>
    </link>
 
 
