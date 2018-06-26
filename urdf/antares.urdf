@@ -436,7 +436,7 @@
      </collision>
    </link>
 
-    <joint name="elbow_pitch_l" type="continuous">
+    <joint name="elbow_l" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 -0.14048"/>
      <parent link="lower_shoulder_l"/>
      <child link="forearm_l"/>
@@ -459,7 +459,7 @@
      </collision>
    </link>
    
-    <joint name="elbow_pitch_r" type="continuous">
+    <joint name="elbow_r" type="continuous">
      <origin rpy="0 0 0" xyz="0 0 -0.14048"/>
      <parent link="lower_shoulder_r"/>
      <child link="forearm_r"/>
